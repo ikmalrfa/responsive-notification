@@ -1,0 +1,61 @@
+body {
+        --primary: 25,91,255;
+        --color: 44, 62, 80;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #f4f7f8;
+        height: calc(var(--vh, 1vh) * 100);
+        overflow: hidden;
+        color: rgb(var(--color));
+    }
+    * {
+        list-style: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    .btn {
+        padding: 10px 20px;
+        background: rgb(27, 92, 255);
+        color: #fff;
+        border: 0px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .notification {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        background: rgb(27, 92, 255);
+        box-shadow: 0px 10px 25px 0px rgba(27, 92, 255, .2);
+        margin: 20px;
+        padding: 10px 20px;
+        border-radius: 20px 8px 20px 20px;
+        color: #fff;
+        visibility: hidden;
+        transition: all .3s ease;
+        transform: translate(100%);
+        width: calc(100% - 40px);
+        max-width: 400px;
+    }
+    .notification h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+    .notification p {
+        font-size: .85rem;
+        opacity: .7;
+    }
+    .notification.visible {
+        visibility: visible;
+        transform: translate(0);
+    }
+    .notification.remove {
+        opacity: 0;
+        transform: translate(0) scale(.8) !important;
+    }
